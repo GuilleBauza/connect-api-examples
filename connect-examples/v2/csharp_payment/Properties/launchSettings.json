@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "sqRazorSample": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:15608;http://localhost:15609"
+    }
+  }
+}

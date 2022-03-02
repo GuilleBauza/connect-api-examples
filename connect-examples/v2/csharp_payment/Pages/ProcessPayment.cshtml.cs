@@ -11,7 +11,7 @@ using Square;
 using Square.Models;
 using Square.Apis;
 using Square.Exceptions;
-
+using System.Diagnostics;
 
 namespace sqRazorSample.Pages
 {
@@ -36,6 +36,9 @@ namespace sqRazorSample.Pages
     public async Task<IActionResult> OnPostAsync()
     {
       var request = JObject.Parse(await new StreamReader(Request.Body).ReadToEndAsync());
+
+            Debug.WriteLine(JsonConvert.SerializeObject(request));
+
       var token = (String)request["token"];
       var PaymentsApi = client.PaymentsApi;
       // Every payment you process with the SDK must have a unique idempotency key.
